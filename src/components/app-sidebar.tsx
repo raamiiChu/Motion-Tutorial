@@ -1,5 +1,6 @@
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
 
+import { ModeToggle } from "@/components/mode-toggle";
 import {
   Sidebar,
   SidebarContent,
@@ -45,7 +46,10 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupLabel className="flex items-center justify-between py-6">
+            <p>Application</p>
+            <ModeToggle />
+          </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map(({ title, url, Icon }) => (
