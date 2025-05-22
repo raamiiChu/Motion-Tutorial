@@ -40,9 +40,11 @@ export default function RootLayout({
         >
           <SidebarProvider>
             <AppSidebar />
-            <main>
-              <SidebarTrigger />
-              {children}
+            <main className="relative w-full">
+              <SidebarTrigger className="sticky top-0" />
+              <div className="mx-auto flex justify-center px-12 py-4">
+                {children}
+              </div>
             </main>
           </SidebarProvider>
         </ThemeProvider>
