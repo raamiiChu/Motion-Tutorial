@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import { AppSidebar } from "@/components/app-sidebar";
 import { ThemeProvider } from "@/components/theme-provider";
+import ScrollbarProgress from "@/components/ui/scrollbar-progress";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 
 import "./globals.css";
@@ -41,8 +42,9 @@ export default function RootLayout({
           <SidebarProvider>
             <AppSidebar />
             <main className="relative w-full">
+              <ScrollbarProgress />
               <SidebarTrigger className="sticky top-0" />
-              <div className="mx-auto flex justify-center px-12 py-4">
+              <div className="mx-auto flex justify-center px-16 py-12">
                 {children}
               </div>
             </main>
