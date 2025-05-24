@@ -1,20 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 
 import { AppSidebar } from "@/components/app-sidebar";
+import ScrollbarProgress from "@/components/component/scrollbar-progress";
 import { ThemeProvider } from "@/components/theme-provider";
-import ScrollbarProgress from "@/components/ui/scrollbar-progress";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const notoSans = Noto_Sans({
+  variable: "--font-noto-sans",
   subsets: ["latin"],
 });
 
@@ -30,9 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${notoSans.className} container mx-auto antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -44,7 +37,7 @@ export default function RootLayout({
             <main className="relative w-full">
               <ScrollbarProgress />
               <SidebarTrigger className="sticky top-0" />
-              <div className="mx-auto flex justify-center px-16 py-12">
+              <div className="mx-auto px-4 py-12 md:px-24 xl:px-40">
                 {children}
               </div>
             </main>
