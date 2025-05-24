@@ -82,6 +82,15 @@ export function Blockquote({
   );
 }
 
+export function Highlight({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLSpanElement>) {
+  return (
+    <span className={cn("font-bold text-red-400", className)} {...props} />
+  );
+}
+
 export function Table({
   className,
   ...props

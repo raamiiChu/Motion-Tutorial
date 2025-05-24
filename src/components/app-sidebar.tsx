@@ -13,31 +13,41 @@ import {
 } from "@/components/ui/sidebar";
 
 // Menu items.
-const items = [
+const sideBarItems = [
   {
-    title: "Home",
-    url: "/",
-    Icon: Home,
+    groupLabel: "Introduction",
+    menuItems: [
+      {
+        title: "What is Motion ?",
+        url: "/",
+        Icon: Home,
+      },
+    ],
   },
   {
-    title: "Inbox",
-    url: "#",
-    Icon: Inbox,
-  },
-  {
-    title: "Calendar",
-    url: "#",
-    Icon: Calendar,
-  },
-  {
-    title: "Search",
-    url: "#",
-    Icon: Search,
-  },
-  {
-    title: "Settings",
-    url: "#",
-    Icon: Settings,
+    groupLabel: "Basics",
+    menuItems: [
+      {
+        title: "Motion Components",
+        url: "/basics/motion-components",
+        Icon: Inbox,
+      },
+      {
+        title: "Calendar",
+        url: "#",
+        Icon: Calendar,
+      },
+      {
+        title: "Search",
+        url: "#",
+        Icon: Search,
+      },
+      {
+        title: "Settings",
+        url: "#",
+        Icon: Settings,
+      },
+    ],
   },
 ];
 
@@ -46,24 +56,28 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel className="flex items-center justify-between py-6">
-            <p>Application</p>
-            <ModeToggle />
-          </SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {items.map(({ title, url, Icon }) => (
-                <SidebarMenuItem key={title}>
-                  <SidebarMenuButton asChild>
-                    <a href={url}>
-                      <Icon />
-                      <span>{title}</span>
-                    </a>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
+          <ModeToggle />
+          {sideBarItems.map(({ groupLabel, menuItems }) => (
+            <div key={groupLabel}>
+              <SidebarGroupLabel className="flex items-center justify-between py-6">
+                <p>{groupLabel}</p>
+              </SidebarGroupLabel>
+              <SidebarGroupContent>
+                <SidebarMenu>
+                  {menuItems.map(({ title, url, Icon }) => (
+                    <SidebarMenuItem key={title}>
+                      <SidebarMenuButton asChild>
+                        <a href={url}>
+                          <Icon />
+                          <span>{title}</span>
+                        </a>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
+                  ))}
+                </SidebarMenu>
+              </SidebarGroupContent>
+            </div>
+          ))}
         </SidebarGroup>
       </SidebarContent>
     </Sidebar>
