@@ -33,13 +33,13 @@ const sideBarItems = [
         Icon: Inbox,
       },
       {
-        title: "Calendar",
-        url: "#",
+        title: "Transition",
+        url: "/basics/transition",
         Icon: Calendar,
       },
       {
-        title: "Search",
-        url: "#",
+        title: "Exit Animation",
+        url: "/basics/exit-animation",
         Icon: Search,
       },
       {

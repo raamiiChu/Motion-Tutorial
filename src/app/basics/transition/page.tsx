@@ -1,11 +1,13 @@
+import React from "react";
+
 import PreviewTabWithCode from "@/components/component/preview-tab-with-code";
 
-import sectionsMotionComponent from "./data";
+import sectionsTransition from "./data";
 
-const MotionComponents = () => {
+const Transition = () => {
   return (
     <>
-      {sectionsMotionComponent.map(
+      {sectionsTransition.map(
         ({ code, name, Example, Description, highlightLines }) => (
           <section key={name}>
             <Description />
@@ -23,4 +25,4 @@ const MotionComponents = () => {
   );
 };
 
-export default MotionComponents;
+export default Transition;
