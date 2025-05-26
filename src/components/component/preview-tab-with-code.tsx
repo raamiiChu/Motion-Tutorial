@@ -43,7 +43,7 @@ const PreviewTabWithCode = ({
 
       <TabsContent value="preview">
         <Card key={childKey}>
-          <CardHeader>
+          <CardHeader className="flex items-center">
             <CardTitle>{filename}</CardTitle>
 
             <TooltipProvider>
