@@ -21,7 +21,7 @@ const Example3Transition = () => {
       <motion.div
         initial={{ x: -100 }}
         animate={{ x: 100 }}
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 1.5, ease: "linear" }}
         className="flex size-20 items-center justify-center bg-amber-500"
       >
         linear
@@ -39,10 +39,10 @@ const Example3Transition = () => {
       <motion.div
         initial={{ x: -100 }}
         animate={{ x: 100 }}
-        transition={{ duration: 1.5, delay: 1.5, ease: "easeInOut" }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
         className="flex size-20 items-center justify-center bg-indigo-400"
       >
-        delay
+        easeOut
       </motion.div>
     </>
   );
