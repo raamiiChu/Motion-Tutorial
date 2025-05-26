@@ -18,14 +18,14 @@ import {
 type PreviewTabWithCodeProps = {
   children: React.ReactNode;
   code: string;
-  filename: string;
+  name: string;
   highlightLines?: number[];
 };
 
 const PreviewTabWithCode = ({
   children,
   code,
-  filename,
+  name,
   highlightLines,
 }: PreviewTabWithCodeProps) => {
   const [childKey, setChildKey] = useState(0);
@@ -44,7 +44,7 @@ const PreviewTabWithCode = ({
       <TabsContent value="preview">
         <Card key={childKey}>
           <CardHeader className="flex items-center">
-            <CardTitle>{filename}</CardTitle>
+            <CardTitle>{name}</CardTitle>
 
             <TooltipProvider>
               <Tooltip>
@@ -74,7 +74,7 @@ const PreviewTabWithCode = ({
       <TabsContent value="code">
         <CodeBlock
           language="tsx"
-          filename={filename}
+          filename={name}
           code={code}
           highlightLines={highlightLines}
         />

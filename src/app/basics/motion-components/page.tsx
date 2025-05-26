@@ -1,26 +1,9 @@
-import PreviewTabWithCode from "@/components/component/preview-tab-with-code";
+import PreviewSections from "@/components/preview-sections";
 
 import sectionsMotionComponent from "./data";
 
 const MotionComponents = () => {
-  return (
-    <>
-      {sectionsMotionComponent.map(
-        ({ code, name, Example, Description, highlightLines }) => (
-          <section key={name}>
-            <Description />
-            <PreviewTabWithCode
-              code={code}
-              filename={name}
-              highlightLines={highlightLines}
-            >
-              <Example />
-            </PreviewTabWithCode>
-          </section>
-        )
-      )}
-    </>
-  );
+  return <PreviewSections sections={sectionsMotionComponent} />;
 };
 
 export default MotionComponents;
