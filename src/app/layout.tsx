@@ -36,7 +36,7 @@ export default function RootLayout({
             <AppSidebar />
             <main className="relative w-full">
               <ScrollbarProgress />
-              <SidebarTrigger className="bg-background border-accent sticky top-0 z-50 border-2" />
+              <SidebarTrigger className="bg-background border-accent sticky top-0 z-50 border-2 md:border-0" />
               <div className="mx-auto px-4 py-12 md:px-24 xl:px-40">
                 {children}
               </div>

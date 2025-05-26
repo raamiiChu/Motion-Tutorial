@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 
-const Example1MotionComponents = () => {
+const ExampleMotionComponents = () => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0 }}
@@ -13,4 +13,4 @@ const Example1MotionComponents = () => {
   );
 };
 
-export default Example1MotionComponents;
+export default ExampleMotionComponents;

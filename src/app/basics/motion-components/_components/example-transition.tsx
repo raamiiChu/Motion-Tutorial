@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 
-const Example3Transition = () => {
+const ExampleTransition = () => {
   return (
     <>
       <motion.div
@@ -48,4 +48,4 @@ const Example3Transition = () => {
   );
 };
 
-export default Example3Transition;
+export default ExampleTransition;

@@ -1,99 +1,32 @@
 import {
   H1,
   H2,
+  H3,
   Highlight,
   InlineCode,
   P,
-  Small,
 } from "@/components/ui/typography";
 
 import {
-  Example1MotionComponents,
-  Example2InitialAndAnimate,
-  Example3Transition,
+  ExampleDelay,
+  ExampleInitialAndAnimate,
+  ExampleMotionComponents,
+  ExampleRepeat,
+  ExampleTransition,
 } from "../_components";
-
-const example1Code = `"use client";
-
-import { motion } from "motion/react";
-
-const DEMO = () => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1.5 }}
-      className="size-40 bg-red-400"
-    />
-  );
-};
-`;
-
-const example2Code = `const DEMO = () => {
-  return (
-    <motion.div
-      initial={{ x: 200, backgroundColor: "#f87171", rotate: 0 }}
-      animate={{ x: 0, backgroundColor: "#818cf8", rotate: 180 }}
-      transition={{ duration: 1 }}
-      className="size-40 bg-red-400"
-    />
-  );
-};
-`;
-
-const example3Code = `const DEMO = () => {
-  return (
-    <>
-      <motion.div
-        initial={{ x: -100 }}
-        animate={{ x: 100 }}
-        transition={{
-          type: "spring",
-          damping: 10, // strength of opposing force
-          stiffness: 100, // speed of the spring
-        }}
-        className="flex size-20 items-center justify-center bg-red-400"
-      >
-        default
-      </motion.div>
-
-      <motion.div
-        initial={{ x: -100 }}
-        animate={{ x: 100 }}
-        transition={{ duration: 1.5, ease: "linear" }}
-        className="flex size-20 items-center justify-center bg-amber-500"
-      >
-        linear
-      </motion.div>
-
-      <motion.div
-        initial={{ x: -100 }}
-        animate={{ x: 100 }}
-        transition={{ duration: 1.5, ease: "easeInOut" }}
-        className="flex size-20 items-center justify-center bg-cyan-500"
-      >
-        easeInOut
-      </motion.div>
-
-      <motion.div
-        initial={{ x: -100 }}
-        animate={{ x: 100 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-        className="flex size-20 items-center justify-center bg-indigo-400"
-      >
-        easeOut
-      </motion.div>
-    </>
-  );
-};
-`;
+import {
+  codeDelay,
+  codeInitialAndAnimate,
+  codeMotionComponents,
+  codeRepeat,
+  codeTransition,
+} from "./code";
 
 const exampleItems = [
   {
-    id: 1,
     name: "motion components",
-    Example: Example1MotionComponents,
-    code: example1Code,
+    Example: ExampleMotionComponents,
+    code: codeMotionComponents,
     highlightLines: [3, 7],
     Description: () => (
       <>
@@ -112,10 +45,9 @@ const exampleItems = [
     ),
   },
   {
-    id: 2,
     name: "initial & animate",
-    Example: Example2InitialAndAnimate,
-    code: example2Code,
+    Example: ExampleInitialAndAnimate,
+    code: codeInitialAndAnimate,
     highlightLines: [4, 5],
     Description: () => (
       <>
@@ -133,10 +65,9 @@ const exampleItems = [
     ),
   },
   {
-    id: 3,
     name: "transition",
-    Example: Example3Transition,
-    code: example3Code,
+    Example: ExampleTransition,
+    code: codeTransition,
     highlightLines: [7, 8, 9, 10, 11, 20, 29, 38],
     Description: () => (
       <>
@@ -145,7 +76,38 @@ const exampleItems = [
           You can define your own animations via the{" "}
           <InlineCode>transition</InlineCode> prop.
         </P>
-        <Small>https://matthewlein.com/tools/ceaser</Small>
+      </>
+    ),
+  },
+  {
+    name: "delay",
+    Example: ExampleDelay,
+    code: codeDelay,
+    highlightLines: [6],
+    Description: () => (
+      <>
+        <H3>Delay</H3>
+        <P>
+          Add <InlineCode>delay</InlineCode> value to make an animation wait
+          before starting.
+        </P>
+      </>
+    ),
+  },
+  {
+    name: "repeat",
+    Example: ExampleRepeat,
+    code: codeRepeat,
+    highlightLines: [
+      6, 7, 8, 9, 10, 11, 17, 18, 19, 20, 21, 27, 28, 29, 30, 31, 32,
+    ],
+    Description: () => (
+      <>
+        <H3>Repeat</H3>
+        <P>
+          Add <InlineCode>repeat</InlineCode> value to make an animation run
+          more than once.
+        </P>
       </>
     ),
   },

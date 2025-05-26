@@ -8,8 +8,8 @@ const MotionComponents = () => {
   return (
     <>
       {exampleItems.map(
-        ({ id, code, name, Example, Description, highlightLines }) => (
-          <section key={id}>
+        ({ code, name, Example, Description, highlightLines }) => (
+          <section key={name}>
             <Description />
             <PreviewTabWithCode
               code={code}

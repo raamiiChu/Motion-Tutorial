@@ -1,9 +1,13 @@
-import Example1MotionComponents from "./example1-motion-components";
-import Example2InitialAndAnimate from "./example2-initial-and-animate";
-import Example3Transition from "./example3-transition";
+import ExampleDelay from "./example-delay";
+import ExampleInitialAndAnimate from "./example-initial-and-animate";
+import ExampleMotionComponents from "./example-motion-components";
+import ExampleRepeat from "./example-repeat";
+import ExampleTransition from "./example-transition";
 
 export {
-  Example1MotionComponents,
-  Example2InitialAndAnimate,
-  Example3Transition,
+  ExampleMotionComponents,
+  ExampleInitialAndAnimate,
+  ExampleTransition,
+  ExampleRepeat,
+  ExampleDelay,
 };
