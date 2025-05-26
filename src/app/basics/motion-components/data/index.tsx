@@ -25,8 +25,8 @@ const DEMO = () => {
 const example2Code = `const DEMO = () => {
   return (
     <motion.div
-      initial={{ x: 200, backgroundColor: "#ffffff" }}
-      animate={{ x: 0, backgroundColor: "#818cf8" }}
+      initial={{ x: 200, backgroundColor: "#f87171", rotate: 0 }}
+      animate={{ x: 0, backgroundColor: "#818cf8", rotate: 180 }}
       transition={{ duration: 1 }}
       className="size-40 bg-red-400"
     />
@@ -45,7 +45,7 @@ const example3Code = `const DEMO = () => {
           damping: 10, // strength of opposing force
           stiffness: 100, // speed of the spring
         }}
-        className="flex size-24 items-center justify-center bg-red-400"
+        className="flex size-20 items-center justify-center bg-red-400"
       >
         default
       </motion.div>
@@ -54,7 +54,7 @@ const example3Code = `const DEMO = () => {
         initial={{ x: -100 }}
         animate={{ x: 100 }}
         transition={{ duration: 1.5 }}
-        className="flex size-24 items-center justify-center bg-amber-500"
+        className="flex size-20 items-center justify-center bg-amber-500"
       >
         linear
       </motion.div>
@@ -63,7 +63,7 @@ const example3Code = `const DEMO = () => {
         initial={{ x: -100 }}
         animate={{ x: 100 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
-        className="flex size-24 items-center justify-center bg-cyan-500"
+        className="flex size-20 items-center justify-center bg-cyan-500"
       >
         easeInOut
       </motion.div>
@@ -72,7 +72,7 @@ const example3Code = `const DEMO = () => {
         initial={{ x: -100 }}
         animate={{ x: 100 }}
         transition={{ duration: 1.5, delay: 1.5, ease: "easeInOut" }}
-        className="flex size-24 items-center justify-center bg-indigo-400"
+        className="flex size-20 items-center justify-center bg-indigo-400"
       >
         delay
       </motion.div>

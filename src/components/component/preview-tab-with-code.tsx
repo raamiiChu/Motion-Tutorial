@@ -65,7 +65,7 @@ const PreviewTabWithCode = ({
             </TooltipProvider>
           </CardHeader>
 
-          <CardContent className="grid max-h-[65dvh] w-full justify-center space-y-4 overflow-scroll md:overflow-auto">
+          <CardContent className="grid h-[50dvh] w-full items-center justify-center gap-2 overflow-scroll md:overflow-auto">
             {children}
           </CardContent>
         </Card>
