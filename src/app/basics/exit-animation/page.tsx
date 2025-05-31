@@ -1,7 +1,9 @@
-import React from "react";
+import PreviewSections from "@/components/preview-sections";
+
+import sectionsExitAnimation from "./data";
 
 const ExitAnimation = () => {
-  return <div></div>;
+  return <PreviewSections sections={sectionsExitAnimation} />;
 };
 
 export default ExitAnimation;
