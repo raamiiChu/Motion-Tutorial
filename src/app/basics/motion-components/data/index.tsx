@@ -1,4 +1,11 @@
-import { H1, H2, InlineCode, P } from "@/components/ui/typography";
+import {
+  H1,
+  H2,
+  H4,
+  Highlight,
+  InlineCode,
+  P,
+} from "@/components/ui/typography";
 
 import {
   ExampleInitialAndAnimate,
@@ -15,6 +22,9 @@ const sectionsMotionComponent = [
     Description: () => (
       <>
         <H1>Motion Components</H1>
+        <H4>
+          <Highlight>! ! ! Always Client Side Rendering (CSR) ! ! !</Highlight>
+        </H4>
         <P>
           All you have to do to start adding your animations is prepend{" "}
           <InlineCode>motion</InlineCode> to any default HTML element.

@@ -1,3 +1,5 @@
 import ExampleExitAnimation from "./example-exit-animation";
+import ExampleExitWithLayout from "./example-exit-with-layout";
+import ExampleSlider from "./example-slider";
 
-export { ExampleExitAnimation };
+export { ExampleExitAnimation, ExampleExitWithLayout, ExampleSlider };

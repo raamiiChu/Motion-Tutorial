@@ -1,7 +1,11 @@
-import { H1, InlineCode, P } from "@/components/ui/typography";
+import { H1, H2, InlineCode, P } from "@/components/ui/typography";
 
-import { ExampleExitAnimation } from "../_components";
-import { codeExitAnimation } from "./code";
+import {
+  ExampleExitAnimation,
+  ExampleExitWithLayout,
+  ExampleSlider,
+} from "../_components";
+import { codeExitAnimation, codeExitWithLayout } from "./code";
 
 const sectionsExitAnimation = [
   {
@@ -22,6 +26,31 @@ const sectionsExitAnimation = [
       </>
     ),
     highlightLines: [1, 12, 17, 21],
+  },
+  {
+    name: "exit animation with layout",
+    code: codeExitWithLayout,
+    Example: ExampleExitWithLayout,
+    Description: () => (
+      <>
+        <H2>Exit Animation with Layout</H2>
+        <P>
+          Set <InlineCode>popLayout</InlineCode> to make exit animations more
+          smoother.
+        </P>
+      </>
+    ),
+    highlightLines: [6, 12],
+  },
+  {
+    name: "slider",
+    code: "codeSlider",
+    Example: ExampleSlider,
+    Description: () => (
+      <>
+        <H2>Slider</H2>
+      </>
+    ),
   },
 ];
 

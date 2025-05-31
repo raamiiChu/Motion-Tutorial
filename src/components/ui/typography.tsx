@@ -52,7 +52,7 @@ export function H4({
   return (
     <h4
       className={cn(
-        "scroll-m-20 text-xl font-semibold tracking-tight",
+        "mb-2 scroll-m-20 text-xl font-semibold tracking-tight",
         className
       )}
       {...props}
@@ -87,7 +87,7 @@ export function Highlight({
   ...props
 }: React.HTMLAttributes<HTMLSpanElement>) {
   return (
-    <span className={cn("font-bold text-red-400", className)} {...props} />
+    <span className={cn("text-destructive font-bold", className)} {...props} />
   );
 }
 
