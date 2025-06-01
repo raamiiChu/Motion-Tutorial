@@ -1,4 +1,4 @@
-const codeDelay = `const DEMO = () => {
+const codeDelay = `const ExampleDelay = () => {
   return (
     <motion.div
       initial={{ x: 200 }}

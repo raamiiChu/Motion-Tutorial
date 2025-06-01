@@ -1,6 +1,6 @@
 const codeExitAnimation = `import { AnimatePresence, motion } from "motion/react";
 
-const DEMO = () => {
+const ExampleExitAnimation = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   return (

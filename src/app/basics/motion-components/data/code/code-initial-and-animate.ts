@@ -1,4 +1,4 @@
-const codeInitialAndAnimate = `const DEMO = () => {
+const codeInitialAndAnimate = `const ExampleInitialAndAnimate = () => {
   return (
     <motion.div
       initial={{ x: 200, backgroundColor: "#f87171" }}

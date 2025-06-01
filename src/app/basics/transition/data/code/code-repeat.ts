@@ -1,4 +1,4 @@
-const codeRepeat = `const DEMO = () => {
+const codeRepeat = `const ExampleRepeat = () => {
   return (
     <>
       <motion.div

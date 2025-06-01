@@ -2,7 +2,7 @@ const codeMotionComponents = `"use client";
 
 import { motion } from "motion/react";
 
-const DEMO = () => {
+const ExampleMotionComponents = () => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0 }}

@@ -1,4 +1,4 @@
-const codeTransition = `const DEMO = () => {
+const codeTransition = `const ExampleTransition = () => {
   return (
     <>
       <motion.div

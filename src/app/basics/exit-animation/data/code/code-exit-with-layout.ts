@@ -1,4 +1,4 @@
-const codeExitWithLayout = `const DEMO = () => {
+const codeExitWithLayout = `const ExampleExitWithLayout = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   return (
