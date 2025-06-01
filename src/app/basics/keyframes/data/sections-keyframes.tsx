@@ -1,7 +1,7 @@
-import { H1, InlineCode, P } from "@/components/ui/typography";
+import { H1, H2, Highlight, InlineCode, P } from "@/components/ui/typography";
 
-import { ExampleKeyframes } from "../_components";
-import { codeKeyframes } from "./code";
+import { ExampleKeyframes, ExampleTimesTransition } from "../_components";
+import { codeKeyframes, codeTimesTransition } from "./code";
 
 const sectionsKeyframes = [
   {
@@ -15,6 +15,27 @@ const sectionsKeyframes = [
         <P>
           Passing an array in <InlineCode>animate</InlineCode> will
           automatically animate through each value in sequence.
+        </P>
+      </>
+    ),
+  },
+  {
+    name: "times-transition",
+    Example: ExampleTimesTransition,
+    code: codeTimesTransition,
+    highlightLines: [7],
+    Description: () => (
+      <>
+        <H2>Times Transition</H2>
+        <P>
+          By default, each keyframe is spaced naturally throughout the
+          animation. Set <InlineCode>times</InlineCode> via{" "}
+          <InlineCode>transition</InlineCode> to specify the time when each
+          keyframe should occur.
+        </P>
+        <P>
+          Notice: <InlineCode>times</InlineCode> is an array of values{" "}
+          <Highlight>between 0 and 1</Highlight>.
         </P>
       </>
     ),
