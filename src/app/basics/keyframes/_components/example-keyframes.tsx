@@ -11,7 +11,7 @@ const ExampleKeyframes = () => {
         rotate: [0, 0, 180, -180, 0],
         borderRadius: ["0%", "50%", "0%", "0%", "50%"],
       }}
-      transition={{ duration: 2 }}
+      transition={{ duration: 4 }}
       className="size-24 bg-red-400"
     />
   );
