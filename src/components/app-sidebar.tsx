@@ -38,14 +38,14 @@ const sideBarItems = [
         Icon: Calendar,
       },
       {
-        title: "Exit Animation",
-        url: "/basics/exit-animation",
-        Icon: Search,
-      },
-      {
         title: "Keyframes",
         url: "/basics/keyframes",
         Icon: Settings,
+      },
+      {
+        title: "Exit Animation",
+        url: "/basics/exit-animation",
+        Icon: Search,
       },
     ],
   },
