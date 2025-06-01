@@ -5,7 +5,7 @@ type Section = {
   name: string;
   Example: () => React.JSX.Element;
   Description: () => React.JSX.Element;
-  highlightLines: number[];
+  highlightLines?: number[];
 };
 
 const PreviewSections = ({ sections }: { sections: Section[] }) => {

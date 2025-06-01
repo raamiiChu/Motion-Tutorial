@@ -43,8 +43,8 @@ const sideBarItems = [
         Icon: Search,
       },
       {
-        title: "Settings",
-        url: "#",
+        title: "Keyframes",
+        url: "/basics/keyframes",
         Icon: Settings,
       },
     ],
