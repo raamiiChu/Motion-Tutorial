@@ -1,4 +1,12 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+import {
+  ArrowRightLeft,
+  Diamond,
+  Grab,
+  Home,
+  Inbox,
+  SquareMousePointer,
+  Unplug,
+} from "lucide-react";
 
 import { ModeToggle } from "@/components/mode-toggle";
 import {
@@ -35,17 +43,32 @@ const sideBarItems = [
       {
         title: "Transition",
         url: "/basics/transition",
-        Icon: Calendar,
+        Icon: ArrowRightLeft,
       },
       {
         title: "Keyframes",
         url: "/basics/keyframes",
-        Icon: Settings,
+        Icon: Diamond,
       },
       {
         title: "Exit Animation",
         url: "/basics/exit-animation",
-        Icon: Search,
+        Icon: Unplug,
+      },
+    ],
+  },
+  {
+    groupLabel: "Gestures",
+    menuItems: [
+      {
+        title: "While Props",
+        url: "/gestures/while-props",
+        Icon: SquareMousePointer,
+      },
+      {
+        title: "Drag",
+        url: "/gestures/drag",
+        Icon: Grab,
       },
     ],
   },
