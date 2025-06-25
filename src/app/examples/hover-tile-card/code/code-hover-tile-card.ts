@@ -44,9 +44,18 @@ const ExampleHoverTileCard = () => {
         style={{
           transform: "translateZ(75px)",
         }}
-        className="bg-foreground/70 text-background absolute inset-6 grid place-content-center rounded-xl shadow-lg"
+        className="bg-foreground/70 text-background absolute inset-6 grid place-content-center gap-1 rounded-xl shadow-lg"
       >
-        <SplinePointer />
+        <motion.div
+          animate={{ rotate: [5, -5] }}
+          transition={{
+            duration: 1,
+            repeat: Infinity,
+            repeatType: "reverse",
+          }}
+        >
+          <SplinePointer />
+        </motion.div>
         <p className="text-2xl font-bold">HOVER ME</p>
       </div>
     </motion.section>
