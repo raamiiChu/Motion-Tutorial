@@ -4,6 +4,7 @@ import {
   Grab,
   Home,
   Inbox,
+  SplinePointer,
   SquareMousePointer,
   Unplug,
 } from "lucide-react";
@@ -69,6 +70,16 @@ const sideBarItems = [
         title: "Drag",
         url: "/gestures/drag",
         Icon: Grab,
+      },
+    ],
+  },
+  {
+    groupLabel: "Examples",
+    menuItems: [
+      {
+        title: "Hover Tile Card",
+        url: "/examples/hover-tile-card",
+        Icon: SplinePointer,
       },
     ],
   },
