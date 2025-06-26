@@ -1,14 +1,14 @@
 import { CodeBlock } from "@/components/ui/code-block";
 
-import { ExampleHoverTileCard } from "./_components";
-import { codeHoverTileCard } from "./code";
+import { ExampleHoverTiltCard } from "./_components";
+import { codeHoverTiltCard } from "./code";
 
-const HoverTileCard = () => {
+const HoverTiltCard = () => {
   return (
     <main className="grid place-items-center gap-8">
-      <ExampleHoverTileCard />
+      <ExampleHoverTiltCard />
       <CodeBlock
-        code={codeHoverTileCard}
+        code={codeHoverTiltCard}
         language="tsx"
         filename="example-hover-tile-card.tsx"
       />
@@ -16,4 +16,4 @@ const HoverTileCard = () => {
   );
 };
 
-export default HoverTileCard;
+export default HoverTiltCard;

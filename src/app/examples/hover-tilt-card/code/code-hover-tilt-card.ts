@@ -1,4 +1,4 @@
-const codeHoverTileCard = `"use client";
+const codeHoverTiltCard = `"use client";
 
 import { SplinePointer } from "lucide-react";
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
@@ -65,4 +65,4 @@ const ExampleHoverTileCard = () => {
 export default ExampleHoverTileCard;
 `;
 
-export default codeHoverTileCard;
+export default codeHoverTiltCard;

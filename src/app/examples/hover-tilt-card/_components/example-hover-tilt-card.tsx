@@ -3,7 +3,7 @@
 import { SplinePointer } from "lucide-react";
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 
-const ExampleHoverTileCard = () => {
+const ExampleHoverTiltCard = () => {
   const x = useMotionValue(0.5);
   const y = useMotionValue(0.5);
 
@@ -62,4 +62,4 @@ const ExampleHoverTileCard = () => {
   );
 };
 
-export default ExampleHoverTileCard;
+export default ExampleHoverTiltCard;

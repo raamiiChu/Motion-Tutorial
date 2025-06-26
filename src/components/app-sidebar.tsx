@@ -77,8 +77,8 @@ const sideBarItems = [
     groupLabel: "Examples",
     menuItems: [
       {
-        title: "Hover Tile Card",
-        url: "/examples/hover-tile-card",
+        title: "Hover Tilt Card",
+        url: "/examples/hover-tilt-card",
         Icon: SplinePointer,
       },
     ],
