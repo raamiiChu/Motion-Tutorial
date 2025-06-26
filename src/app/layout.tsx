@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${notoSans.className} container mx-auto antialiased`}>
+      <body className={`${notoSans.className} mx-auto antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -37,9 +37,9 @@ export default function RootLayout({
             <main className="relative w-full">
               <ScrollbarProgress />
               <SidebarTrigger className="bg-background border-accent sticky top-0 z-50 border-2 md:border-0" />
-              <div className="mx-auto px-4 py-12 md:px-24 xl:px-40">
+              <article className="container mx-auto px-4 py-12 md:px-24 xl:px-40">
                 {children}
-              </div>
+              </article>
             </main>
           </SidebarProvider>
         </ThemeProvider>
