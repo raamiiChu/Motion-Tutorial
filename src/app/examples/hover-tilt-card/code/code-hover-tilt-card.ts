@@ -1,9 +1,13 @@
 const codeHoverTiltCard = `"use client";
 
+import { useRef } from "react";
+
 import { SplinePointer } from "lucide-react";
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 
-const ExampleHoverTileCard = () => {
+const ExampleHoverTiltCard = () => {
+  const cardRef = useRef<HTMLDivElement>(null);
+
   const x = useMotionValue(0.5);
   const y = useMotionValue(0.5);
 
@@ -14,11 +18,16 @@ const ExampleHoverTileCard = () => {
   const rotateY = useTransform(xSpring, [0, 1], [-15, 15]);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-    const { offsetX, offsetY } = e.nativeEvent;
-    const { width, height } = e.currentTarget.getBoundingClientRect();
+    if (!cardRef.current) {
+      return;
+    }
 
-    const xPercentage = offsetX / width;
-    const yPercentage = offsetY / height;
+    const { clientX, clientY } = e;
+    const { width, height, left, top } =
+      cardRef.current.getBoundingClientRect();
+
+    const xPercentage = (clientX - left) / width;
+    const yPercentage = (clientY - top) / height;
 
     x.set(xPercentage);
     y.set(yPercentage);
@@ -31,6 +40,7 @@ const ExampleHoverTileCard = () => {
 
   return (
     <motion.section
+      ref={cardRef}
       style={{
         transformStyle: "preserve-3d",
         rotateX,
@@ -62,7 +72,7 @@ const ExampleHoverTileCard = () => {
   );
 };
 
-export default ExampleHoverTileCard;
+export default ExampleHoverTiltCard;
 `;
 
 export default codeHoverTiltCard;
