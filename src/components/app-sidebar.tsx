@@ -7,6 +7,7 @@ import {
   SplinePointer,
   SquareMousePointer,
   Unplug,
+  View,
 } from "lucide-react";
 
 import { ModeToggle } from "@/components/mode-toggle";
@@ -70,6 +71,11 @@ const sideBarItems = [
         title: "Drag",
         url: "/gestures/drag",
         Icon: Grab,
+      },
+      {
+        title: "View Based Animations",
+        url: "/gestures/view-based-animations",
+        Icon: View,
       },
     ],
   },

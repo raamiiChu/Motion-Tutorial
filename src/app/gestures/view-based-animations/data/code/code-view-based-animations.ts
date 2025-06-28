@@ -1,0 +1,41 @@
+const codeScrollAnimations = `const ExampleViewBasedAnimations = () => {
+  return (
+    <section className="h-[150dvh]">
+      <motion.div
+        className="flex items-center justify-between gap-2"
+        animate={{
+          y: [20, 0],
+        }}
+        transition={{
+          duration: 0.5,
+          repeat: Infinity,
+          repeatType: "reverse",
+        }}
+      >
+        <ArrowBigDown />
+        <p>Scroll Down</p>
+        <ArrowBigDown />
+      </motion.div>
+
+      <div className="h-[75dvh]" />
+
+      <motion.div
+        className="mx-auto size-24 rounded-lg bg-red-400"
+        initial={{
+          scale: 1,
+          opacity: 0,
+        }}
+        whileInView={{
+          scale: 2,
+          opacity: 1,
+        }}
+        transition={{
+          duration: 1,
+        }}
+      />
+    </section>
+  );
+};
+`;
+
+export default codeScrollAnimations;
