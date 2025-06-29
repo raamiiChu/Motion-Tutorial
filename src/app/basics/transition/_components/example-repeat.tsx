@@ -7,7 +7,7 @@ import { P } from "@/components/ui/typography";
 const ExampleRepeat = () => {
   return (
     <>
-      <div className="flex items-center justify-between gap-6">
+      <section className="flex items-center justify-between gap-6">
         <P>Repeat 2</P>
         <motion.div
           animate={{ rotate: 360 }}
@@ -19,9 +19,9 @@ const ExampleRepeat = () => {
           }}
           className="size-20 bg-red-400"
         />
-      </div>
+      </section>
 
-      <div className="flex items-center justify-between gap-6">
+      <section className="flex items-center justify-between gap-6">
         <P>Repeat Infinity</P>
         <motion.div
           animate={{ rotate: 360 }}
@@ -32,9 +32,9 @@ const ExampleRepeat = () => {
           }}
           className="size-20 bg-red-400"
         />
-      </div>
+      </section>
 
-      <div className="flex items-center justify-between gap-6">
+      <section className="flex items-center justify-between gap-6">
         <P>Reverse</P>
         <motion.div
           animate={{ rotate: 360 }}
@@ -46,7 +46,7 @@ const ExampleRepeat = () => {
           }}
           className="size-20 bg-red-400"
         />
-      </div>
+      </section>
     </>
   );
 };

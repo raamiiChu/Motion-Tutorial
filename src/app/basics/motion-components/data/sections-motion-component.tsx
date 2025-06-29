@@ -1,4 +1,5 @@
 import {
+  Blockquote,
   H1,
   H2,
   H4,
@@ -34,6 +35,10 @@ const sectionsMotionComponent = [
           <InlineCode>motion.button</InlineCode> /{" "}
           <InlineCode>motion.h1</InlineCode> etc.
         </P>
+        <Blockquote>
+          <InlineCode>Motion</InlineCode> components animate values outside the
+          React render cycle for improved performance.
+        </Blockquote>
       </>
     ),
   },
