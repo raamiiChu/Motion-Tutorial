@@ -1,5 +1,6 @@
 import {
   ArrowRightLeft,
+  BookOpenText,
   Diamond,
   Grab,
   Home,
@@ -76,6 +77,16 @@ const sideBarItems = [
         title: "View Based Animations",
         url: "/gestures/view-based-animations",
         Icon: View,
+      },
+    ],
+  },
+  {
+    groupLabel: "Hooks",
+    menuItems: [
+      {
+        title: "useMotionValue",
+        url: "/hooks/use-motion-value",
+        Icon: BookOpenText,
       },
     ],
   },
