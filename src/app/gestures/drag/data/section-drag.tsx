@@ -68,7 +68,7 @@ const sectionDrag = [
     highlightLines: [2, 6, 11],
     Description: () => (
       <P>
-        It can accept a ref to another component created with React&apos;s
+        It can accept a ref to another component created with React&apos;s{" "}
         <InlineCode>useRef</InlineCode> hook.
       </P>
     ),
