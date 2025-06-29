@@ -56,10 +56,10 @@ export const CodeBlock = ({
     : highlightLines;
 
   return (
-    <div className="relative max-h-[60dvh] w-full overflow-y-scroll rounded-lg bg-slate-900 p-4 font-mono text-sm">
+    <div className="relative max-h-[60dvh] w-full overflow-auto rounded-lg bg-slate-900 p-4 font-mono text-sm">
       <div className="flex flex-col gap-2">
         {tabsExist && (
-          <div className="flex overflow-x-auto">
+          <div className="flex">
             {tabs.map((tab, index) => (
               <button
                 key={index}
@@ -95,6 +95,7 @@ export const CodeBlock = ({
           padding: 0,
           background: "transparent",
           fontSize: "0.875rem", // text-sm equivalent
+          overflow: "unset",
         }}
         wrapLines={true}
         showLineNumbers={true}
