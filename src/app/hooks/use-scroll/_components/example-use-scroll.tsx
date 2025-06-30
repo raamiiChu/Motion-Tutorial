@@ -6,7 +6,7 @@ const ExampleUseScroll = () => {
   return (
     <H4 className="text-center">
       Don&apos;t you realize? <br />
-      Scroll down and look at the bottom of the page.
+      Scroll down and look at the bottom of the screen.
     </H4>
   );
 };
