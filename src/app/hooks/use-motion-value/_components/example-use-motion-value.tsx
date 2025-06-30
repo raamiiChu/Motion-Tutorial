@@ -46,7 +46,7 @@ const ExampleUseMotionValue = () => {
         </Button>
       </nav>
 
-      <div role="group" className="flex items-center gap-20">
+      <section role="region" className="flex items-center gap-20">
         <motion.div
           className="size-24 rounded-lg bg-red-400"
           style={{ scale }}
@@ -55,7 +55,7 @@ const ExampleUseMotionValue = () => {
           className="size-24 rounded-lg bg-red-400"
           style={{ scale: scaleState }}
         />
-      </div>
+      </section>
     </section>
   );
 };

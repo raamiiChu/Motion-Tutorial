@@ -33,7 +33,7 @@ const codeContainer = `const ExampleContainer = () => {
 
       <section
         ref={containerRef}
-        role="group"
+        role="region"
         className="grid h-64 w-32 gap-2 overflow-y-scroll"
       >
         {Array.from({ length: 10 }).map((_, index) => (
