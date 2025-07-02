@@ -2,6 +2,7 @@ import {
   Blockquote,
   H1,
   H2,
+  H3,
   H4,
   Highlight,
   InlineCode,
@@ -11,8 +12,13 @@ import {
 import {
   ExampleInitialAndAnimate,
   ExampleMotionComponents,
+  ExampleSvgAnimation,
 } from "../_components";
-import { codeInitialAndAnimate, codeMotionComponents } from "./code";
+import {
+  codeInitialAndAnimate,
+  codeMotionComponents,
+  codeSvgAnimation,
+} from "./code";
 
 const sectionsMotionComponent = [
   {
@@ -58,6 +64,21 @@ const sectionsMotionComponent = [
         <P>
           These 2 are gonna to take the same kind of props as what{" "}
           <InlineCode>style</InlineCode> tag is gonna take.
+        </P>
+      </>
+    ),
+  },
+  {
+    name: "svg animation",
+    Example: ExampleSvgAnimation,
+    code: codeSvgAnimation,
+    highlightLines: [9, 10],
+    Description: () => (
+      <>
+        <H3>SVG Animation</H3>
+        <P>
+          You can also draw SVG paths using the{" "}
+          <InlineCode>pathLength</InlineCode> property.
         </P>
       </>
     ),
