@@ -16,7 +16,7 @@ import { codeMargin, codeOnce, codeViewBasedAnimations } from "./code";
 
 const sectionViewBasedAnimations = [
   {
-    name: "view-based-animations",
+    name: "view based animations",
     Example: ExampleViewBasedAnimations,
     code: codeViewBasedAnimations,
     highlightLines: [28, 29, 30, 31],

@@ -83,14 +83,14 @@ const TextWithSvgPath = () => {
         </text>
       </svg>
 
-      <footer className="bg-foreground/95 h-32 overflow-hidden">
+      <footer className="bg-foreground/95 h-24 overflow-hidden">
         <motion.div
           role="presentation"
           style={{ y: footerY }}
           className="text-background flex h-full items-center justify-center gap-4"
         >
           {socialIcons.map(({ name, Icon }) => (
-            <Icon key={name} className="h-6 w-6" />
+            <Icon key={name} className="size-6" />
           ))}
         </motion.div>
       </footer>

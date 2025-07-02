@@ -30,7 +30,7 @@ export function AppSidebar() {
                 <SidebarMenu>
                   {menuItems.map(({ title, url, Icon, isBlank }) => (
                     <SidebarMenuItem key={title}>
-                      <SidebarMenuButton asChild>
+                      <SidebarMenuButton asChild url={url}>
                         <Link href={url} target={isBlank ? "_blank" : "_self"}>
                           <Icon />
                           <span>{title}</span>

@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import * as React from "react";
 
 import { Slot } from "@radix-ui/react-slot";
@@ -503,21 +504,24 @@ function SidebarMenuButton({
   size = "default",
   tooltip,
   className,
+  url,
   ...props
 }: React.ComponentProps<"button"> & {
   asChild?: boolean;
   isActive?: boolean;
   tooltip?: string | React.ComponentProps<typeof TooltipContent>;
+  url?: string;
 } & VariantProps<typeof sidebarMenuButtonVariants>) {
   const Comp = asChild ? Slot : "button";
   const { isMobile, state } = useSidebar();
+  const pathname = usePathname();
 
   const button = (
     <Comp
       data-slot="sidebar-menu-button"
       data-sidebar="menu-button"
       data-size={size}
-      data-active={isActive}
+      data-active={isActive || pathname === url}
       className={cn(sidebarMenuButtonVariants({ variant, size }), className)}
       {...props}
     />

@@ -5,7 +5,7 @@ import { codeComposition, codeUseMotionValue } from "./code";
 
 const sectionsUseMotionValue = [
   {
-    name: "example",
+    name: "motion value",
     code: codeUseMotionValue,
     Example: ExampleUseMotionValue,
     Description: () => (

@@ -1,10 +1,6 @@
 import { H1, H2, InlineCode, P } from "@/components/ui/typography";
 
-import {
-  ExampleExitAnimation,
-  ExampleExitWithLayout,
-  ExampleSlider,
-} from "../_components";
+import { ExampleExitAnimation, ExampleExitWithLayout } from "../_components";
 import { codeExitAnimation, codeExitWithLayout } from "./code";
 
 const sectionsExitAnimation = [
@@ -41,16 +37,6 @@ const sectionsExitAnimation = [
       </>
     ),
     highlightLines: [6, 12],
-  },
-  {
-    name: "slider",
-    code: "codeSlider",
-    Example: ExampleSlider,
-    Description: () => (
-      <>
-        <H2>Slider</H2>
-      </>
-    ),
   },
 ];
 
