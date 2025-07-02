@@ -56,8 +56,8 @@ export const CodeBlock = ({
     : highlightLines;
 
   return (
-    <div className="relative max-h-[60dvh] w-full overflow-auto rounded-lg bg-slate-900 p-4 font-mono text-sm">
-      <div className="flex flex-col gap-2">
+    <div className="relative max-h-[60dvh] w-full overflow-auto rounded-lg bg-slate-900 font-mono text-sm">
+      <div className="sticky inset-0 flex flex-col gap-2">
         {tabsExist && (
           <div className="flex">
             {tabs.map((tab, index) => (
@@ -76,7 +76,7 @@ export const CodeBlock = ({
           </div>
         )}
         {!tabsExist && filename && (
-          <div className="flex items-center justify-between py-2">
+          <div className="border-muted flex items-center justify-between border-b bg-slate-900/10 p-4 backdrop-blur-md">
             <div className="text-xs text-zinc-400">{filename}</div>
             <button
               onClick={copyToClipboard}
@@ -92,7 +92,7 @@ export const CodeBlock = ({
         style={atomDark}
         customStyle={{
           margin: 0,
-          padding: 0,
+          padding: "0.5rem",
           background: "transparent",
           fontSize: "0.875rem", // text-sm equivalent
           overflow: "unset",
