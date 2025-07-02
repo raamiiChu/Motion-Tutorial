@@ -2,7 +2,37 @@
 
 import { useEffect, useRef } from "react";
 
+import {
+  SiFacebook,
+  SiGithub,
+  SiInstagram,
+  SiX,
+  SiYoutube,
+} from "@icons-pack/react-simple-icons";
 import { motion, useScroll, useTransform } from "motion/react";
+
+const socialIcons = [
+  {
+    name: "Facebook",
+    Icon: SiFacebook,
+  },
+  {
+    name: "Github",
+    Icon: SiGithub,
+  },
+  {
+    name: "Instagram",
+    Icon: SiInstagram,
+  },
+  {
+    name: "Linkedin",
+    Icon: SiYoutube,
+  },
+  {
+    name: "Twitter",
+    Icon: SiX,
+  },
+];
 
 const TextWithSvgPath = () => {
   const targetRef = useRef<HTMLDivElement>(null);
@@ -53,13 +83,15 @@ const TextWithSvgPath = () => {
         </text>
       </svg>
 
-      <footer className="bg-foreground h-40 overflow-hidden">
+      <footer className="bg-foreground/95 h-32 overflow-hidden">
         <motion.div
           role="presentation"
           style={{ y: footerY }}
-          className="text-background flex h-full items-center justify-center"
+          className="text-background flex h-full items-center justify-center gap-4"
         >
-          Footer
+          {socialIcons.map(({ name, Icon }) => (
+            <Icon key={name} className="h-6 w-6" />
+          ))}
         </motion.div>
       </footer>
     </figure>
