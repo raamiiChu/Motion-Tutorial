@@ -121,6 +121,30 @@ export const sideBarGroups: SideBarGroup[] = [
         Icon: BookMarked,
         isBlank: true,
       },
+      {
+        title: "Lenis Docs",
+        url: "https://lenis.darkroom.engineering/",
+        Icon: BookMarked,
+        isBlank: true,
+      },
+      {
+        title: "Motion Crash Course",
+        url: "https://youtu.be/znbCa4Rr054?si=6cGe9US2m4hOyHyg",
+        Icon: BookMarked,
+        isBlank: true,
+      },
+      {
+        title: "Text on an SVG Path",
+        url: "https://youtu.be/UxiLC9XFvuM?si=no0O6mj4gRU18OYf",
+        Icon: BookMarked,
+        isBlank: true,
+      },
+      {
+        title: "Lenis in Next.js",
+        url: "https://youtu.be/fpyNjX-dVBs?si=CVav6tnsWnvtu55p",
+        Icon: BookMarked,
+        isBlank: true,
+      },
     ],
   },
 ];

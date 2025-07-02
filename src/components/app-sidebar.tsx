@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { ExternalLink } from "lucide-react";
+
 import { ModeToggle } from "@/components/mode-toggle";
 import {
   Sidebar,
@@ -32,6 +34,7 @@ export function AppSidebar() {
                         <Link href={url} target={isBlank ? "_blank" : "_self"}>
                           <Icon />
                           <span>{title}</span>
+                          {isBlank && <ExternalLink />}
                         </Link>
                       </SidebarMenuButton>
                     </SidebarMenuItem>
