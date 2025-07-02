@@ -20,13 +20,13 @@ const codeScrollAnimations = `const ExampleViewBasedAnimations = () => {
       <div className="h-[75dvh]" />
 
       <motion.div
-        className="mx-auto size-24 rounded-lg bg-red-400"
+        className="mx-auto size-32 rounded-lg bg-red-400"
         initial={{
-          scale: 1,
+          x: 48,
           opacity: 0,
         }}
         whileInView={{
-          scale: 2,
+          x: 0,
           opacity: 1,
         }}
         transition={{
