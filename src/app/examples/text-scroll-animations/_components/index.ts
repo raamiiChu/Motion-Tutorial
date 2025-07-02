@@ -1,3 +1,4 @@
-import ExampleStaggeredText from "./example-staggered-text";
+import StaggeredText from "./staggered-text";
+import TextWithSvgPath from "./text-with-svg-path";
 
-export { ExampleStaggeredText };
+export { StaggeredText, TextWithSvgPath };

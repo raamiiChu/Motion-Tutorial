@@ -1,9 +1,10 @@
-import { ExampleStaggeredText } from "./_components";
+import { StaggeredText, TextWithSvgPath } from "./_components";
 
 const TextScrollAnimations = () => {
   return (
     <>
-      <ExampleStaggeredText />
+      <StaggeredText />
+      <TextWithSvgPath />
     </>
   );
 };

@@ -13,13 +13,13 @@ const textVariants = {
   },
 };
 
-const ExampleStaggeredText = () => {
+const StaggeredText = () => {
   const articleRef = useRef<HTMLDivElement>(null);
   const [progress, setProgress] = useState(0);
 
   const { scrollYProgress } = useScroll({
     target: articleRef,
-    offset: ["start 50%", "end 75%"],
+    offset: ["start 45%", "end 70%"],
   });
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const ExampleStaggeredText = () => {
   return (
     <>
       <header className="h-72"></header>
-      <article ref={articleRef}>
+      <article className="py-4" ref={articleRef}>
         {text.split("").map((char, index) => (
           <motion.span
             key={index}
@@ -53,9 +53,8 @@ const ExampleStaggeredText = () => {
           </motion.span>
         ))}
       </article>
-      <footer className="h-72"></footer>
     </>
   );
 };
 
-export default ExampleStaggeredText;
+export default StaggeredText;
