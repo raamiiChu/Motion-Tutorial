@@ -34,7 +34,7 @@ export function AppSidebar() {
                         <Link href={url} target={isBlank ? "_blank" : "_self"}>
                           <Icon />
                           <span>{title}</span>
-                          {isBlank && <ExternalLink />}
+                          <span>{isBlank && <ExternalLink size={14} />}</span>
                         </Link>
                       </SidebarMenuButton>
                     </SidebarMenuItem>

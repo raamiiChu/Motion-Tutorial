@@ -1,3 +1,4 @@
+import { SiYoutube } from "@icons-pack/react-simple-icons";
 import {
   ArrowRightLeft,
   BookMarked,
@@ -8,10 +9,12 @@ import {
   Inbox,
   Origami,
   Scroll,
+  Sparkles,
   SplinePointer,
   SquareMousePointer,
   Unplug,
   View,
+  WandSparkles,
 } from "lucide-react";
 
 type MenuItem = {
@@ -113,6 +116,23 @@ export const sideBarGroups: SideBarGroup[] = [
     ],
   },
   {
+    groupLabel: "Recommended UI Collections",
+    menuItems: [
+      {
+        title: "Aceternity UI",
+        url: "https://ui.aceternity.com/",
+        Icon: WandSparkles,
+        isBlank: true,
+      },
+      {
+        title: "Motion Primitives",
+        url: "https://motion-primitives.com/",
+        Icon: Sparkles,
+        isBlank: true,
+      },
+    ],
+  },
+  {
     groupLabel: "Reference",
     menuItems: [
       {
@@ -130,19 +150,19 @@ export const sideBarGroups: SideBarGroup[] = [
       {
         title: "Motion Crash Course",
         url: "https://youtu.be/znbCa4Rr054?si=6cGe9US2m4hOyHyg",
-        Icon: BookMarked,
+        Icon: SiYoutube,
         isBlank: true,
       },
       {
         title: "Text on an SVG Path",
         url: "https://youtu.be/UxiLC9XFvuM?si=no0O6mj4gRU18OYf",
-        Icon: BookMarked,
+        Icon: SiYoutube,
         isBlank: true,
       },
       {
         title: "Lenis in Next.js",
         url: "https://youtu.be/fpyNjX-dVBs?si=CVav6tnsWnvtu55p",
-        Icon: BookMarked,
+        Icon: SiYoutube,
         isBlank: true,
       },
     ],
