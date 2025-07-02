@@ -43,7 +43,7 @@ const StaggeredText = () => {
             variants={textVariants}
             initial="hidden"
             animate={progress > index / text.length ? "visible" : "hidden"}
-            className="m-2 inline-block text-5xl font-bold"
+            className="m-2 inline-block text-2xl font-bold sm:text-3xl md:text-4xl xl:text-5xl"
             transition={{
               ease: "easeInOut",
               duration: 0.5,

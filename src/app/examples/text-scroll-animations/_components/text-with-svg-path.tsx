@@ -35,7 +35,7 @@ const TextWithSvgPath = () => {
           fill="none"
           d="m0,88.5c61.37,0,61.5-68,126.5-68,58,0,51,68,123,68"
         />
-        <text className="fill-blue-400 text-[6px] uppercase">
+        <text className="fill-blue-400 text-[0.375rem] uppercase">
           {Array.from({ length: 3 }).map((_, index) => (
             <textPath
               key={index}
