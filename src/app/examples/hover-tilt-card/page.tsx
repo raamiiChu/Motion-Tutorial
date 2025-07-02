@@ -5,7 +5,7 @@ import { codeHoverTiltCard } from "./code";
 
 const HoverTiltCard = () => {
   return (
-    <main className="grid place-items-center gap-8">
+    <main className="grid place-items-center gap-8 py-6">
       <ExampleHoverTiltCard />
       <CodeBlock
         code={codeHoverTiltCard}
