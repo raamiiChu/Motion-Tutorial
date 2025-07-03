@@ -1,98 +1,192 @@
-import { H1, H2, H3, List, P } from "@/components/ui/typography";
+import Link from "next/link";
+
+import {
+  H1,
+  H2,
+  List,
+  P,
+  TBody,
+  TD,
+  TH,
+  THead,
+  TR,
+  Table,
+} from "@/components/ui/typography";
+
+import { AnimateSection, GsapIcon, MotionIcon } from "./_components";
 
 export default function Home() {
   return (
-    <div className="container mx-auto">
-      <H1>Framer Motion vs GSAP</H1>
+    <div className="container mx-auto space-y-12">
+      <H1>Introduction</H1>
+      <AnimateSection>
+        <H2>What is Motion?</H2>
 
-      <section className="mb-12">
-        <H2>What is Framer Motion?</H2>
+        <Link
+          href="https://motion.dev/"
+          target="_blank"
+          className="inline-block transition-all hover:scale-105"
+        >
+          <MotionIcon />
+        </Link>
+
         <P>
-          Framer Motion is a production-ready motion library for React. It makes
-          creating animations and interactions simple and declarative. Built on
-          top of the Framer animation platform, it provides a powerful and
-          flexible API for creating complex animations.
+          Motion (formerly known as Framer Motion) is a powerful animation
+          library, designed specifically for React, but also available for Vue
+          and vanilla JavaScript. It focuses on being declarative,
+          high-performance, and easy to use.
         </P>
+      </AnimateSection>
+
+      <AnimateSection>
+        <H2>Why Choose Motion?</H2>
         <div className="bg-secondary rounded-lg p-4">
-          <H3>Key Features:</H3>
           <List>
-            <li>Declarative animations</li>
-            <li>Built specifically for React</li>
-            <li>Simple API for complex animations</li>
-            <li>Gesture support</li>
-            <li>Layout animations</li>
-            <li>Variants for orchestration</li>
+            <li>
+              <P>Intuitive and beginner-friendly</P>
+              <P>
+                Built on React props, so it&apos;s easy to pick up without a
+                steep learning curve.
+              </P>
+            </li>
+            <li>
+              <P>Zero-config to get started</P>
+              <P>Works out of the box with performance-focused defaults.</P>
+            </li>
+            <li>
+              <P>Highly customizable</P>
+              <P>
+                Use variants, animation control hooks, and custom transitions
+                for advanced orchestration.
+              </P>
+            </li>
+            <li>
+              <P>Strong community and documentation</P>
+              <P>
+                Actively maintained with plenty of tutorials, examples, and{" "}
+                <Link
+                  href="https://github.com/motiondivision/motion"
+                  target="_blank"
+                  className="underline"
+                >
+                  GitHub
+                </Link>{" "}
+                stars.
+              </P>
+            </li>
           </List>
         </div>
-      </section>
+      </AnimateSection>
 
-      <section className="mb-12">
-        <H2>What is GSAP?</H2>
-        <P>
-          GSAP (GreenSock Animation Platform) is a professional-grade animation
-          library that works with any JavaScript framework. It&apos;s known for
-          its performance, flexibility, and extensive feature set.
-        </P>
-        <div className="bg-secondary rounded-lg p-4">
-          <H3>Key Features:</H3>
-          <List>
-            <li>High performance animations</li>
-            <li>Framework agnostic</li>
-            <li>Advanced timeline control</li>
-            <li>Extensive plugin ecosystem</li>
-            <li>SVG animations</li>
-            <li>ScrollTrigger for scroll-based animations</li>
-          </List>
-        </div>
-      </section>
+      <AnimateSection>
+        <H2>Motion vs GSAP</H2>
 
-      <section className="mb-12">
-        <H2>Key Differences</H2>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <div className="bg-muted shadow-muted-foreground rounded-lg p-6">
-            <H3>Framer Motion</H3>
-            <List>
-              <li>React-specific implementation</li>
-              <li>More intuitive for React developers</li>
-              <li>Better integration with React&apos;s component lifecycle</li>
-              <li>Simpler learning curve for React projects</li>
-              <li>Built-in gesture support</li>
-            </List>
-          </div>
-          <div className="bg-muted shadow-muted-foreground rounded-lg p-6">
-            <H3>GSAP</H3>
-            <List>
-              <li>Framework agnostic</li>
-              <li>More powerful timeline control</li>
-              <li>Better performance for complex animations</li>
-              <li>More extensive plugin system</li>
-              <li>Better for non-React projects</li>
-            </List>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <H2>When to Use Each</H2>
-        <div className="bg-secondary rounded-lg p-6">
-          <H3>Choose Framer Motion when:</H3>
-          <List>
-            <li>Working on a React project</li>
-            <li>Need simple, declarative animations</li>
-            <li>Want built-in gesture support</li>
-            <li>Prefer a more React-native approach</li>
-          </List>
-
-          <H3>Choose GSAP when:</H3>
-          <List>
-            <li>Working on a non-React project</li>
-            <li>Need complex timeline animations</li>
-            <li>Performance is critical</li>
-            <li>Need advanced SVG animations</li>
-            <li>Want to use scroll-based animations</li>
-          </List>
-        </div>
-      </section>
+        <Table>
+          <THead>
+            <TR>
+              <TH>Feature</TH>
+              <TH>
+                <span className="flex items-center gap-2">
+                  Motion{" "}
+                  <Link
+                    href="https://motion.dev/"
+                    target="_blank"
+                    className="transition-all hover:scale-105"
+                  >
+                    <MotionIcon className="size-10" />
+                  </Link>
+                </span>
+              </TH>
+              <TH>
+                <span className="flex items-center gap-2">
+                  GSAP{" "}
+                  <Link
+                    href="https://gsap.com/"
+                    target="_blank"
+                    className="transition-all hover:scale-105"
+                  >
+                    <GsapIcon className="size-10" />
+                  </Link>
+                </span>
+              </TH>
+            </TR>
+          </THead>
+          <TBody>
+            <TR>
+              <TD>Framework</TD>
+              <TD>
+                All frameworks; supports React, Vue, Angular, plain JS, etc.
+              </TD>
+              <TD>
+                Originally built for React, now also supports Vanilla JS and Vue
+              </TD>
+            </TR>
+          </TBody>
+          <TBody>
+            <TR>
+              <TD>Timeline Control</TD>
+              <TD>Powerful timeline system with precise sequence control</TD>
+              <TD>
+                Supports keyframes, exit animations, and sequencing, but not as
+                flexible as GSAP
+              </TD>
+            </TR>
+          </TBody>
+          <TBody>
+            <TR>
+              <TD>Performance & Bundle Size</TD>
+              <TD>Minified \~23 KB; full functionality, not tree-shakable</TD>
+              <TD>
+                Core \~18 KB; mini modules \~2.6 KB; supports tree-shaking and
+                optimized performance
+              </TD>
+            </TR>
+          </TBody>
+          <TBody>
+            <TR>
+              <TD>Plugin Features</TD>
+              <TD>SVG, morphing, ScrollTrigger, Flip, Canvas/WebGL, etc.</TD>
+              <TD>layout animation, gestures, and scroll-based animation</TD>
+            </TR>
+          </TBody>
+          <TBody>
+            <TR>
+              <TD>Learning Curve</TD>
+              <TD>
+                Powerful but more complex API; React integration requires
+                cleanup and management
+              </TD>
+              <TD>
+                Declarative API fits React/Vue well; beginner-friendly syntax
+              </TD>
+            </TR>
+          </TBody>
+          <TBody>
+            <TR>
+              <TD>Price</TD>
+              <TD>
+                Completely free
+                <br />
+                <Link
+                  href="https://gsap.com/pricing/"
+                  target="_blank"
+                  className="underline"
+                >
+                  Thanks to Webflow
+                </Link>
+              </TD>
+              <TD>Completely free</TD>
+            </TR>
+          </TBody>
+          <TBody>
+            <TR>
+              <TD>When to Use</TD>
+              <TD>Simple / Interactive</TD>
+              <TD>Complex / Performance Critical</TD>
+            </TR>
+          </TBody>
+        </Table>
+      </AnimateSection>
     </div>
   );
 }

@@ -125,7 +125,7 @@ export function TR({
   return (
     <tr
       className={cn(
-        "border-b transition-colors hover:bg-slate-100/50 data-[state=selected]:bg-slate-100",
+        "hover:bg-muted data-[state=selected]:bg-muted border-b transition-colors",
         className
       )}
       {...props}
@@ -155,7 +155,7 @@ export function TH({
   return (
     <th
       className={cn(
-        "h-12 px-4 text-left align-middle font-medium text-slate-500 [&:has([role=checkbox])]:pr-0",
+        "text-foreground h-12 px-4 text-left align-middle font-medium [&:has([role=checkbox])]:pr-0",
         className
       )}
       {...props}
