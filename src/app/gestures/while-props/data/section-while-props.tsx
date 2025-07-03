@@ -33,7 +33,7 @@ const sectionWhileProps = [
     name: "event listener",
     Example: ExampleEventListener,
     code: codeEventListener,
-    highlightLines: [9, 10, 11, 12],
+    highlightLines: [10, 11, 26, 27],
     Description: () => (
       <>
         <H2>Event Listener</H2>

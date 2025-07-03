@@ -8,7 +8,7 @@ const codeKeyframes = `const ExampleKeyframes = () => {
         borderRadius: ["0%", "50%", "0%", "0%", "50%"],
       }}
       transition={{ duration: 4 }}
-      className="size-24 bg-red-400"
+      className="size-24 rounded-lg bg-red-400"
     />
   );
 };
