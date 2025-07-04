@@ -1,8 +1,10 @@
 import Link from "next/link";
 
+import { SiGithub } from "@icons-pack/react-simple-icons";
 import { ExternalLink } from "lucide-react";
 
 import { ModeToggle } from "@/components/mode-toggle";
+import { Button } from "@/components/ui/button";
 import {
   Sidebar,
   SidebarContent,
@@ -20,7 +22,18 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <ModeToggle />
+          <nav className="flex items-center justify-between">
+            <ModeToggle />
+
+            <Button variant="ghost" size="icon" asChild>
+              <Link
+                href="https://github.com/raamiiChu/Motion-Tutorial"
+                target="_blank"
+              >
+                <SiGithub className="size-[1.2rem]" />
+              </Link>
+            </Button>
+          </nav>
           {sideBarGroups.map(({ groupLabel, menuItems }) => (
             <div key={groupLabel}>
               <SidebarGroupLabel className="flex items-center justify-between py-6">
