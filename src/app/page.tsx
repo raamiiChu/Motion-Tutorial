@@ -81,22 +81,10 @@ export default function Home() {
       <AnimateSection>
         <H2>Motion vs GSAP</H2>
 
-        <Table>
+        <Table className="mb-4">
           <THead>
             <TR>
               <TH>Feature</TH>
-              <TH>
-                <span className="flex items-center gap-2">
-                  Motion{" "}
-                  <Link
-                    href="https://motion.dev/"
-                    target="_blank"
-                    className="transition-all hover:scale-105"
-                  >
-                    <MotionIcon className="size-10" />
-                  </Link>
-                </span>
-              </TH>
               <TH>
                 <span className="flex items-center gap-2">
                   GSAP{" "}
@@ -106,6 +94,18 @@ export default function Home() {
                     className="transition-all hover:scale-105"
                   >
                     <GsapIcon className="size-10" />
+                  </Link>
+                </span>
+              </TH>
+              <TH>
+                <span className="flex items-center gap-2">
+                  Motion{" "}
+                  <Link
+                    href="https://motion.dev/"
+                    target="_blank"
+                    className="transition-all hover:scale-105"
+                  >
+                    <MotionIcon className="size-10" />
                   </Link>
                 </span>
               </TH>
@@ -119,45 +119,6 @@ export default function Home() {
               </TD>
               <TD>
                 Originally built for React, now also supports Vanilla JS and Vue
-              </TD>
-            </TR>
-          </TBody>
-          <TBody>
-            <TR>
-              <TD>Timeline Control</TD>
-              <TD>Powerful timeline system with precise sequence control</TD>
-              <TD>
-                Supports keyframes, exit animations, and sequencing, but not as
-                flexible as GSAP
-              </TD>
-            </TR>
-          </TBody>
-          <TBody>
-            <TR>
-              <TD>Performance & Bundle Size</TD>
-              <TD>Minified \~23 KB; full functionality, not tree-shakable</TD>
-              <TD>
-                Core \~18 KB; mini modules \~2.6 KB; supports tree-shaking and
-                optimized performance
-              </TD>
-            </TR>
-          </TBody>
-          <TBody>
-            <TR>
-              <TD>Plugin Features</TD>
-              <TD>SVG, morphing, ScrollTrigger, Flip, Canvas/WebGL, etc.</TD>
-              <TD>layout animation, gestures, and scroll-based animation</TD>
-            </TR>
-          </TBody>
-          <TBody>
-            <TR>
-              <TD>Learning Curve</TD>
-              <TD>
-                Powerful but more complex API; React integration requires
-                cleanup and management
-              </TD>
-              <TD>
-                Declarative API fits React/Vue well; beginner-friendly syntax
               </TD>
             </TR>
           </TBody>
@@ -181,8 +142,48 @@ export default function Home() {
           <TBody>
             <TR>
               <TD>When to Use</TD>
-              <TD>Simple / Interactive</TD>
               <TD>Complex / Performance Critical</TD>
+              <TD>Simple / Interactive</TD>
+            </TR>
+          </TBody>
+          <TBody>
+            <TR>
+              <TD>Timeline Control</TD>
+              <TD>Powerful timeline system with precise sequence control</TD>
+              <TD>
+                Supports keyframes, exit animations, and sequencing, but not as
+                flexible as GSAP
+              </TD>
+            </TR>
+          </TBody>
+          <TBody>
+            <TR>
+              <TD>Plugin Features</TD>
+              <TD>SVG, morphing, ScrollTrigger, Flip, Canvas/WebGL, etc.</TD>
+              <TD>layout animation, gestures, and scroll-based animation</TD>
+            </TR>
+          </TBody>
+          <TBody>
+            <TR>
+              <TD>Learning Curve</TD>
+              <TD>
+                Powerful but more complex API; <br />
+                React integration requires cleanup and management
+              </TD>
+              <TD>
+                Declarative API fits React / Vue well; <br />
+                beginner-friendly syntax
+              </TD>
+            </TR>
+          </TBody>
+          <TBody>
+            <TR>
+              <TD>Performance & Bundle Size</TD>
+              <TD>Minified ~23 KB; full functionality, not tree-shakable</TD>
+              <TD>
+                Core ~18 KB; mini modules ~2.6 KB; supports tree-shaking and
+                optimized performance
+              </TD>
             </TR>
           </TBody>
         </Table>
