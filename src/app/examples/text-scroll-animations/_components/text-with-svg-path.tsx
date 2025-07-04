@@ -34,7 +34,7 @@ const socialIcons = [
   },
 ];
 
-const TextWithSvgPath = () => {
+const TextWithSvgPath = ({ children }: { children: string }) => {
   const targetRef = useRef<HTMLDivElement>(null);
   const textRefs = useRef<SVGTextPathElement[]>([]);
 
@@ -77,7 +77,7 @@ const TextWithSvgPath = () => {
                 }
               }}
             >
-              Lorem ipsum dolor sit amet
+              {children}
             </textPath>
           ))}
         </text>

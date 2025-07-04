@@ -20,7 +20,10 @@ const images = [
 const TextScrollAnimations = () => {
   return (
     <>
-      <StaggeredText />
+      <StaggeredText>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aperiam
+        dicta expedita nulla, provident, voluptatibus, perspiciatis eos
+      </StaggeredText>
       <ScrollXWithY>
         {images.map((image, index) => (
           <Image
@@ -33,7 +36,7 @@ const TextScrollAnimations = () => {
           />
         ))}
       </ScrollXWithY>
-      <TextWithSvgPath />
+      <TextWithSvgPath>Lorem ipsum dolor sit amet</TextWithSvgPath>
     </>
   );
 };

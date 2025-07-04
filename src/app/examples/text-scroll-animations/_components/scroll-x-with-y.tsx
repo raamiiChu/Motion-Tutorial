@@ -17,9 +17,9 @@ const ScrollXWithY = ({ children }: { children: React.ReactNode }) => {
     <section ref={targetRef} className="relative h-[300dvh]">
       <div
         role="presentation"
-        className="sticky top-0 flex h-dvh w-full items-center overflow-hidden"
+        className="sticky top-0 flex h-dvh items-center overflow-hidden"
       >
-        <motion.div className="flex w-fit flex-nowrap gap-4" style={{ x }}>
+        <motion.div className="flex flex-nowrap gap-4" style={{ x }}>
           {children}
         </motion.div>
       </div>

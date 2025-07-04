@@ -13,7 +13,7 @@ const textVariants = {
   },
 };
 
-const StaggeredText = () => {
+const StaggeredText = ({ children }: { children: string }) => {
   const articleRef = useRef<HTMLDivElement>(null);
   const [progress, setProgress] = useState(0);
 
@@ -30,19 +30,16 @@ const StaggeredText = () => {
     return unsubscribe;
   }, [scrollYProgress]);
 
-  const text =
-    "現在の私たちは、EXPO'70が約束したはずの「人類の進歩と調和」の中にはいない。繰り返し大災害に苛まれ、経済は停滞し、新たな戦争まで始まってしまった。";
-
   return (
     <>
       <header className="h-72"></header>
       <article className="py-4" ref={articleRef}>
-        {text.split("").map((char, index) => (
+        {children.split("").map((char, index) => (
           <motion.span
             key={index}
             variants={textVariants}
             initial="hidden"
-            animate={progress > index / text.length ? "visible" : "hidden"}
+            animate={progress > index / children.length ? "visible" : "hidden"}
             className="m-2 inline-block text-2xl font-bold sm:text-3xl md:text-4xl xl:text-5xl"
             transition={{
               ease: "easeInOut",
