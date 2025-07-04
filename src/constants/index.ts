@@ -3,6 +3,7 @@ import {
   ArrowRightLeft,
   BookMarked,
   BookOpenText,
+  ChartBarStacked,
   Diamond,
   Grab,
   Home,
@@ -58,6 +59,11 @@ export const sideBarGroups: SideBarGroup[] = [
         title: "Keyframes",
         url: "/basics/keyframes",
         Icon: Diamond,
+      },
+      {
+        title: "Variants",
+        url: "/basics/variants",
+        Icon: ChartBarStacked,
       },
       {
         title: "Exit Animation",
